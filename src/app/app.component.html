@@ -6,8 +6,13 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
 <h1>Liste de films</h1>
-<p> {{filmList[0].title}} </p>
+<imput
+  type="text"
+  (click)="selectFilm($event)""
+/>
+<p (click)="selectFilm(filmList[0])"> {{filmList[0].title}}</p>
 <p> {{filmList[1].title}} </p>
 <p> {{filmList[2].title}} </p>
 <p> {{filmList[3].title}} </p>

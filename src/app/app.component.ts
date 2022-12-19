@@ -3,7 +3,7 @@ import { FILMS } from './mock-film-list';
 import{ Film } from './homepage';
 @Component({
   selector: 'app-root',
-templateUrl: `./app.component.html`
+templateUrl: `app.component.html`
 })
 export class AppComponent implements OnInit {
   filmList: Film[] = FILMS;
