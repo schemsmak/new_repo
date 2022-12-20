@@ -1,22 +1,18 @@
-
-<h1 class="center">Nos films péférer</h1>
-
-<div class="container">
-  <div class="row">
-    <div *ngFor="let film of filmList" class="col s12 m6">
-      <div class="card horizantal">
-        <div class="card-image">
-          <img [src]="film.imageUrl"> 
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p>{{film.title}}</p>
-            <p><small>{{ film.created }}</small></p>
-          </div>
-         </div>   
+<h1 class='center'>Nos films préférer</h1>
+<div class='container'>
+<div class="row">
+<div *ngFor='let film of filmList' class="col s6 m4">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img [src]="film.imageUrl">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>{{film.title}}</p>
+        <p><small>{{ film.created }}</small></p>
       </div>
     </div>
   </div>
 </div>
-
-
+</div>
+</div>
