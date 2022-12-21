@@ -6,14 +6,14 @@ import { Router } from '@angular/router';
 
 
 @Component({
-
-  selector: 'app-root',
-templateUrl: `app.component.html`
+selector: 'app-root',
+templateUrl: './app.component.html'
 })
 
 export class AppComponent implements OnInit {
   filmList: Film[] = FILMS;
   filmSelected: Film|undefined;
+filmGenre: string;
 
 ngOnInit() {
   console.table(this.filmList);
@@ -30,4 +30,4 @@ else{
   this.filmSelected = film;
 }
 }
-}
+} 
