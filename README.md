@@ -17,6 +17,14 @@ git push -u origin main (pousse les modifications vers le serveurs github)
 #Pour ouvrir le code sur vs code 
 code .
 
+#list-film.component.html
+ajouter class={genre | FilmGenre } pour bulle couleur 
+
+#detail-film.component.ts
+Activation des routes 
+recuperation de l'id
+attribution a la propriete film un id
+si le film=id affichage description sinon message d'erreur 
 
 
 #brouillon test pour list
