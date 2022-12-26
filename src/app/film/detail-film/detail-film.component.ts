@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FilmService } from '../film.service';
 import { Film } from '../homepage';
-import { FILMS } from '../mock-film-list';
+
 @Component({
   selector: 'app-detail-film',
   templateUrl: './detail-film.component.html',
@@ -11,15 +12,24 @@ export class DetailFilmComponent implements OnInit {
   filmList: Film[];
   film: Film|undefined;
 
-  constructor(private router: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+     private router: Router,
+    private filmService: FilmService
+    ) { }
 
   ngOnInit(): void {
-    this.filmList = FILMS;
-    const filmId: string|null= this.router.snapshot.paramMap.get('id');
+  
+    const filmId: string|null= this.route.snapshot.paramMap.get('id');
+    
     if(filmId){
-      this.film = this.filmList.find(film => film.id === +filmId);
+      this.film = this.filmService.getFilmById(+filmId);
     }
     
   }
+  
+goToFilmList(){
+  this.router.navigate(['/films']);
 
+
+}
 }

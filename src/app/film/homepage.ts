@@ -8,6 +8,7 @@ export class Film{
     imageUrl:string;
     created: Date;
     genres:Array<string>;
+  
 
 };
 

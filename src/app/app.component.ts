@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FILMS } from './mock-film-list';
-import{ Film } from './homepage';
+import { FILMS } from './film/mock-film-list';
+import{ Film } from './film/homepage';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 

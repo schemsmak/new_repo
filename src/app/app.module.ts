@@ -3,21 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BorderCardDirective } from './border-card.directive';
-import { FilmGenrePipe } from './film-genre.pipe';
-import { ListFilmComponent } from './list-film/list-film.component';
-import { DetailFilmComponent } from './detail-film/detail-film.component';
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FilmModule } from './film/film.module';
 @NgModule({
   declarations: [
     AppComponent,
-    BorderCardDirective,
-    FilmGenrePipe,
-    ListFilmComponent,
-    DetailFilmComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    FilmModule,
     AppRoutingModule
   ],
   providers: [],
