@@ -6,6 +6,7 @@ import { DetailFilmComponent } from './detail-film/detail-film.component';
 import { FilmGenrePipe } from './film-genre.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { FilmService } from './film.service';
+import { SearchFilmComponent } from './search-film/search-film.component';
 
 const routes: Routes = [
   {path: 'films', component: ListFilmComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
     ListFilmComponent,
     DetailFilmComponent,
     BorderCardDirective,
-    FilmGenrePipe
+    FilmGenrePipe,
+    SearchFilmComponent
   ],
   imports: [
     CommonModule,

@@ -22,7 +22,8 @@ export class DetailFilmComponent implements OnInit {
     const filmId: string|null= this.route.snapshot.paramMap.get('id');
     
     if(filmId){
-      this.film = this.filmService.getFilmById(+filmId);
+      this.filmService.getFilmById(+filmId)
+      .subscribe(film => this.film = film);
     }
     
   }

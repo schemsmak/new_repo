@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+.container-btns {
+    position: relative;
+    top: -66px;
+}
+
+.btn-first {
+    border: 2px solid #f1f1f1;
+    outline: none;
+    background: transparent;
+    font-size: 11px;
+    padding: 19px;
+    width: 80px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn-first:nth-child(1)
+{
+    margin-left: 1170px;
+}
+
+.btn-first:hover
+{
+    transition: all 0.3s ease-in-out;
+    background: #f1f1f1;
+    color: #333;
+}
+
+#rectangle{
+    width: 1263px;
+    height:75px;
+    background-color:cornflowerblue;
+}

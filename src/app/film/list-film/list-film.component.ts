@@ -18,7 +18,8 @@ export class ListFilmComponent implements OnInit  {
     { }
 
   ngOnInit() {
-this.filmList = this.filmService.getFilmList();
+this.filmService.getFilmList()
+.subscribe(filmList => this.filmList = filmList);
   }
    
   goToFilm(film: Film) {

@@ -7,6 +7,7 @@ import { FILMS } from './film/mock-film-list';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    return { FILMS };
+    const films = FILMS;
+    return { films };
 }
 }
