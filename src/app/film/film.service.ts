@@ -25,7 +25,7 @@ export class FilmService {
     );
   }
 
-  searchfilmList( term: string ): Observable<Film[]>{
+  searchFilmList( term: string ): Observable<Film[]>{
     return this.http.get<Film[]>(`api/films/?title=${term}`).pipe(
       tap((response) => this.log(response)), 
       catchError((error) => this.handleError(error, undefined))

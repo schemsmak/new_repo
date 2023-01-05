@@ -1,6 +1,9 @@
 
 <div class='container'>
     <div class="row">
+
+      <app-search-film></app-search-film>
+      
     <div *ngFor='let film of filmList' class="col s8 m4">
       <div (click)="goToFilm(film)" class="card horizontal"appBorderCard>
         <div class="card-image">
