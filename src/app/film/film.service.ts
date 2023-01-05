@@ -1,23 +1,36 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable,catchError,tap,of } from 'rxjs';
+import { Observable,catchError,tap,of, map } from 'rxjs';
 import { Film } from './homepage';
 
 
 
 @Injectable()
 export class FilmService {
+   
 
   constructor( private http: HttpClient) {}
 
-  getFilmList() : Observable<Film[] >{
-    return this.http.get<Film[]>('api/films').pipe(
-      tap((response) => this.log(response)), //tap equivalent d'un console.log pour un observable 
-    catchError((error) =>this.handleError(error, [])) // interception d'error et importer un tableau vide 
+
+  getFilmList(title:string) : Observable<Film[] >{
+    return this.http.get('https://www.omdbapi.com/?apikey=42af3ea1&i=tt3896198'/*'http://www.omdbapi.com/?s='+title+'&apikey=ac68cfd'*/).pipe(
+    map((response: any) =>  this.responseToFilm(response)
+    ) // interception d'error et importer un tableau vide 
      
     );
   }
-  
+  responseToFilm(response: any){
+    return response.Search.map((film: any) => {
+      return {
+        id: film.imdbID,
+        title: film.Title,
+        description: film.Year,
+        imageUrl: film.Poster,
+        created: film.Year,
+        genres: film.Type,
+      }
+    })
+  }
   getFilmById(filmId: number) : Observable<Film|undefined> {
     return this.http.get<Film>( `api/films/${filmId}` ).pipe(
       tap((response) => this.log(response)), 

@@ -12,14 +12,20 @@ import { FilmService } from '../film.service';
 })
 export class ListFilmComponent implements OnInit  {
   filmList: Film[] ;
-  
+  titleList: string[] = ["avengers", "batman", "spiderman", "ironman", "hulk", "thor", "captain america", "black widow", "black"];
   constructor(private router: Router,
     private filmService: FilmService) 
     { }
 
   ngOnInit() {
-this.filmService.getFilmList()
-.subscribe(filmList => this.filmList = filmList);
+this.titleList.forEach(
+  (title) => {
+    this.filmService.getFilmList(title)
+    .subscribe(filmList => {
+      this.filmList = [...this.filmList, ...filmList]
+    });
+  }
+) 
   }
    
   goToFilm(film: Film) {
