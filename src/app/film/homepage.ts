@@ -1,15 +1,10 @@
 
 export class Film{
-    id:number;
-    filmApiUrl:string;
-    filmData:string;
-    title:string;
-    description:string;
-    imageUrl:string;
-    created: Date;
-    genres:Array<string>;
-  
-
+ Title: string;
+ Year: number;
+ imdbID: string;
+ Type: string;
+ Poster: string;
 };
 
 

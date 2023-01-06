@@ -1,26 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-.container-btns {
-    position: relative;
-    top: -66px;
-}
-
-.btn-first {
-    border: 2px solid #f1f1f1;
-    outline: none;
-    background: transparent;
-    font-size: 11px;
-    padding: 19px;
-    width: 80px;
-    color: #f1f1f1;
-    cursor: pointer;
-}
-
-.btn-first:nth-child(1)
-{
-    margin-left: 1170px;
-}
-
-.btn-first:hover
+.nav-item:hover
 {
     transition: all 0.3s ease-in-out;
     background: #f1f1f1;
@@ -29,6 +7,31 @@
 
 #rectangle{
     width: 1263px;
-    height:75px;
+    height:7px;
     background-color:cornflowerblue;
 }
+
+ 
+#barre
+   {
+    background-color: #fff;
+    padding: 0 20px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .nav-item {
+    color: #83818c;
+    font-family: arial, sans-serif;
+    padding: 20px;
+    margin: 0 6px;
+    position: relative;
+  }
+  
