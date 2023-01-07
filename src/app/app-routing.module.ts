@@ -7,6 +7,7 @@ import { GenresComponent } from './genres/genres.component';
 import { MoviesComponent } from './movies/movies.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SeriesComponent } from './series/series.component';
+import { AfficheComponent } from './affiche/affiche.component';
 
 const routes: Routes = [
 { path: '', component: ListFilmComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
 { path: 'genres', component: GenresComponent },
 { path: 'movies', component: MoviesComponent },
 { path: 'series', component: SeriesComponent },
+{ path: 'affiche', component: AfficheComponent },
 { path: '**', component: PageNotFoundComponent },
 
 ];

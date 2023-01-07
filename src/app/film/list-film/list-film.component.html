@@ -4,18 +4,18 @@
   <div *ngFor='let film of filmList' class="col s8 m4">
     <div (click)="goToFilm(film)" class="card horizontal"appBorderCard>
       <div class="card-image">
-        <img [src]="film.imageUrl">
+        <img [src]="film.Poster">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>{{film.title}}</p>
-          <p><small>{{ film.created | date:"dd/MM/yyyy" }}</small></p> 
-          <span 
+          <p>{{film.Title}}</p>
+          <p><small>{{ film.Year }}</small></p> 
+          <!--<span 
           *ngFor="let genre of film.genres" 
           class="{{ genre }}"
         >
         {{ genre }}
-        </span>
+        </span>-->
         </div>
       </div>
     </div>

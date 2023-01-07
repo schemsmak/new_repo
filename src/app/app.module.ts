@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { GenresComponent } from './genres/genres.component';
 import { MoviesComponent } from './movies/movies.component';
 import { SeriesComponent } from './series/series.component';
+import { AfficheComponent } from './affiche/affiche.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { SeriesComponent } from './series/series.component';
     AboutComponent,
     GenresComponent,
     MoviesComponent,
-    SeriesComponent
+    SeriesComponent,
+    AfficheComponent
   ],
   imports: [
     BrowserModule,

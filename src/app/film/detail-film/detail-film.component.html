@@ -1,10 +1,10 @@
 
 <div *ngIf="film" class="row">
 <div class="col s12 m8 offset-m2">
-<h2 class="header center">{{ film.title}}</h2>
+<h2 class="header center">{{ film.Title}}</h2>
 <div class="card horizontal hoverable">
   <div class="card-image">
-    <img [src]="film.imageUrl">
+    <img [src]="film.Poster">
   </div>
   <div class="card-stacked">
     <div class="card-content">
@@ -12,25 +12,24 @@
         <tbody>
           <tr>
             <td>Titre</td>
-            <td><strong>{{ film.title }}</strong></td>
+            <td><strong>{{ film.Title }}</strong></td>
           </tr>
           <tr>
             <td>Data</td>
-            <td><strong>{{ film.filmData }}</strong></td>
+            <td><strong>{{ film.Type }}</strong></td>
           </tr>
           <tr>
-            <td>ApiUrl</td>
-            <td><strong>{{ film.filmApiUrl }}</strong></td>
+           
           </tr>
           <tr>
             <td>Genre</td>
             <td>
-              <span *ngFor="let genre of film.genres" class="{{ genre  }}">{{ genre }}</span>
+              <!--<span *ngFor="let genre of film.genres" class="{{ genre  }}">{{ genre }}</span> -->
             </td>
           </tr>
           <tr>
             <td>Date de création</td>
-            <td><em>{{ film.created | date:"dd/MM/yyyy" }}</em></td>
+            <td><em>{{ film.Year | date:"dd/MM/yyyy" }}</em></td>
           </tr>
         </tbody>
       </table>

@@ -20,9 +20,9 @@ ngOnInit() {
 }
 
 selectFilm(filmId: string){
-  const film : Film|undefined = this.filmList.find(film => film.id === +filmId);
+  const film : Film|undefined = this.filmList.find(film => film.imdbID === filmId);
   if(film){  
-  console.log(`Vous avez demandé le film ${film.title}`);
+  console.log(`Vous avez demandé le film ${film.Title}`);
   this.filmSelected = film;
 }
 else{
