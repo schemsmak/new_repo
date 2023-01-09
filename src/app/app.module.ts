@@ -10,6 +10,9 @@ import { GenresComponent } from './genres/genres.component';
 import { MoviesComponent } from './movies/movies.component';
 import { SeriesComponent } from './series/series.component';
 import { AfficheComponent } from './affiche/affiche.component';
+import { EstelleComponent } from './estelle/estelle.component';
+import { SchemsComponent } from './schems/schems.component';
+import { GameComponent } from './game/game.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,10 @@ import { AfficheComponent } from './affiche/affiche.component';
     GenresComponent,
     MoviesComponent,
     SeriesComponent,
-    AfficheComponent
+    AfficheComponent,
+    EstelleComponent,
+    SchemsComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

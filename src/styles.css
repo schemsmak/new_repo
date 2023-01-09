@@ -6,11 +6,11 @@
 }
 
 #rectangle{
-    width: 1263px;
+    width: auto;
     height:7px;
     background-color:cornflowerblue;
+    display: flex;
 }
-
  
 #barre
    {
