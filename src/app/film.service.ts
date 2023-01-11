@@ -1,21 +1,12 @@
 
-/*private url : string='https://www.omdbapi.com/';
-private apiKey : string = 'ac68cfd'
-
-  getFilmList(title:string) {
-   this.http.get(`${this.url}?apikey=${this.apiKey}&s=${title}`);
-  }
-
-  getFilmId(id: string) {
-    this.http.get(`${this.url}?apikey=${this.apiKey}&i=${id}`);
-  }*/
-
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable,catchError,tap,of, map } from 'rxjs';
 import { Film } from './homepage';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class FilmService {
 
   constructor( private http: HttpClient) {}

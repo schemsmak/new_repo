@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FILMS } from './film/mock-film-list';
-import{ Film } from './film/homepage';
+import { FILMS } from './mock-film-list';
+import{ Film } from './homepage';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
@@ -13,7 +13,11 @@ templateUrl: './app.component.html'
 export class AppComponent implements OnInit {
   filmList: Film[] = FILMS;
   filmSelected: Film|undefined;
+  films: Film[] = [];
+  Title: string;
 filmGenre: string;
+searchText : any;
+
 
 ngOnInit() {
   console.table(this.filmList);

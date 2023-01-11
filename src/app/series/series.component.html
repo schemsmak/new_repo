@@ -1,1 +1,26 @@
-<p>series works!</p>
+
+<div class='container'>
+    <div class="row">
+    <div *ngFor='let serie of series' class="col s8 m4">
+      <div (click)="goToFilm(serie)" class="card horizontal"appBorderCard>
+        <div class="card-image">
+          <img [src]="serie.Poster">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>{{serie.Title}}</p>
+            <p><small>{{ serie.Year }}</small></p> 
+            <!--<span 
+            *ngFor="let genre of film.genres" 
+            class="{{ genre }}"
+          >
+          {{ genre }}
+          </span>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  
+

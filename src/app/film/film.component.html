@@ -1,14 +1,15 @@
+ 
 <div class='container'>
     <div class="row">
-    <div *ngFor='let game of games' class="col s8 m4">
-      <div (click)="goToFilm(game)" class="card horizontal"appBorderCard>
+    <div *ngFor='let film of films' class="col s12 m4">
+      <div (click)="goToFilm(film)" class="card horizontal" appBorderCard>
         <div class="card-image">
-          <img [src]="game.Poster">
+          <img [src]="film.Poster">
         </div>
         <div class="card-stacked">
           <div class="card-content">
-            <p>{{game.Title}}</p>
-            <p><small>{{ game.Year }}</small></p> 
+            <p>{{film.Title}}</p>
+            <p><small>{{ film.Year }}</small></p> 
             <!--<span 
             *ngFor="let genre of film.genres" 
             class="{{ genre }}"

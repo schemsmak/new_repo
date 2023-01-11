@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FilmService } from '../film.service';
+import { Film } from '../homepage';
 
 @Component({
   selector: 'app-series',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeriesComponent implements OnInit {
 
-  constructor() { }
+  @Input() series:Film[]=[];
 
-  ngOnInit(): void {
+
+  constructor(private router: Router,
+    private filmService: FilmService) { }
+
+  ngOnInit() {
+
+  }
+
+  goToFilm(film: Film) {
+    this.router.navigate(['/series', film.imdbID]);
   }
 
 }
+

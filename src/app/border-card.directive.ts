@@ -7,7 +7,7 @@ import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 
 export class BorderCardDirective {
   private initialColor: string = '#f5f5f5';
-  private defaultColor: string = '#009688';
+  private defaultColor: string = '#3f51b5';
   private defaultHeight: number = 210;
 
 

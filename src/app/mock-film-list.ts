@@ -1,4 +1,3 @@
-import { MoviesComponent } from '../movies/movies.component';
 import { Film } from './homepage';
   
 export const FILMS: Film[] = [

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FilmService } from '../film.service';
-import { Film } from '../homepage';
+import { FilmService } from '../../film.service';
+import { Film } from '../../homepage';
 
 
 @Component({
@@ -10,7 +10,6 @@ import { Film } from '../homepage';
   styleUrls: ['./detail-film.component.css']
 })
 export class DetailFilmComponent implements OnInit {
-  filmList: Film[];
   film: Film|undefined;
 
   constructor(private route: ActivatedRoute,
@@ -30,7 +29,7 @@ export class DetailFilmComponent implements OnInit {
   }
   
 goToFilmList(){
-  this.router.navigate(['/films']);
+  this.router.navigate(['/home']);
 
 
 }
